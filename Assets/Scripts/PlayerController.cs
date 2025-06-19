@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using UnityEditor.Experimental.GraphView;
 
 public class PlayerController : MonoBehaviour
@@ -25,15 +24,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask layer;
 
 
-
-   
-
-    #region Unity Functions
-
     private void Awake()
     {
 
-        prota = GetComponent<Rigidbody2D>();
+        prota = GetComponent<Rigidbody>();
 
 
     }
@@ -68,9 +62,6 @@ public class PlayerController : MonoBehaviour
             dosSaltos = true;
         }
     }
-
-
-
 
     public void ReadDireccion(InputAction.CallbackContext Context)
     {
